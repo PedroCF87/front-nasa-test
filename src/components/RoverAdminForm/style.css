@@ -1,0 +1,51 @@
+form label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+form small {
+    display: block;
+    margin: 16px 012%0 12%;
+    font-size: 0.7em;
+    color: #8b8b8b;
+}
+
+.card {
+    width: 35vw;
+    margin-top: 32px;
+    background-color: #FFF;
+    padding: 16px 16px;
+    border-radius: 8px;
+}
+
+.btn-send {
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 0 2px 16px;
+    border: solid 1px #0b3d92;
+    border-radius: 8px;
+    background-color: #0b3d92;
+    color: #FFF;
+}
+
+.btn-send-inactive {
+    display: inline-block;
+    cursor: not-allowed;
+    padding: 8px;
+    margin: 0 0 2px 16px;
+    border: solid 1px #9c9c9c;
+    border-radius: 8px;
+    background-color: #e6e6e6;
+    color: #9c9c9c;
+}
+
+.error-card {
+    background-color: #F00;
+    max-width: 93%;
+}
+
+.error-card .card-body {
+    color: #FFF;
+    font-size: 0.7em;
+}

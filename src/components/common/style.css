@@ -1,0 +1,12 @@
+.App-header {
+  max-height: 20vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.App-logo {
+  max-height: 128px;
+  width: auto;
+  margin-right: 32px;
+}
