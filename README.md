@@ -40,6 +40,10 @@ Responsável por extrair o conteúdo do arquivo de texto e realizar uma pré-val
 
 Foi desenvolvido em ReactJS com Typescript e TDD Jest.
 
+## Evidências do funcionamento do sistema
+
+[Link das evidências do funcionamento do sistema](https://docs.google.com/document/d/1Z2LNncTY2tfDvovWv6B8Cntan6T3Wre1hwQ1qNPGSHU/edit?usp=sharing).
+
 ## Para executar o projeto
 
 ### 1 - Clone e execute o projeto do Back-end
