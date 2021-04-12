@@ -7,7 +7,7 @@ Criar um sistema que calcule a posição final dos rovers na superfície de Mart
 
 Os dados de entrada devem ser lidos de um arquivo de texto.
 
-O sistema deve extrair os dados, definir o tamanho do platô, deinir a posição inicial de cada rover, calcular a posição final de cada rover e retornar para o usuário.
+O sistema deve extrair os dados, definir o tamanho do platô, definir a posição inicial de cada rover, calcular a posição final de cada rover e retornar para o usuário.
 
 ### Exemplo de arquivo de entrada
 ```
@@ -36,9 +36,9 @@ Responsável por processar os movimentos dos rovers.
 Foi desenvolvido em Typescript com Express, usando alguns dos princípios SOLID (todos os que foram possível usar).
 
 ### Front-end
-Responsável por extrair o conteúdo do arquivo de texto e realizar uma pré-validação.
+Responsável por extrair o conteúdo do arquivo de texto, realizar uma pré-validação (evitando que seja disparada uma requsição inválida para o back-end), enviar para o back-end e exibir a resposta para o usuário.
 
-Foi desenvolvido em ReactJS com Typescript e TDD Jest.
+Foi desenvolvido em ReactJS com Typescript e TDD Jest (teste).
 
 ## Evidências do funcionamento do sistema
 
@@ -56,10 +56,10 @@ Foi desenvolvido em ReactJS com Typescript e TDD Jest.
 ``` git clone https://github.com/PedroCF87/front-nasa-test.git```
 
 ### 3 - Instale as dependências
-``` npm i```
+``` yarn```
 
 ### 4 - Execute o projeto
-``` npm run start```
+``` yarn run start```
 
 ### 5 - Testes do projeto
-``` npm run test```
+``` yarn run test```
