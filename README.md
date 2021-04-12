@@ -50,16 +50,16 @@ Foi desenvolvido em ReactJS com Typescript e TDD Jest.
 > Para saber como executar, 
 > acesse a [documentação do projeto](https://github.com/PedroCF87/back-nasa-test)
 
-```bash git clone https://github.com/PedroCF87/back-nasa-test.git```
+``` git clone https://github.com/PedroCF87/back-nasa-test.git```
 
 ### 2 - Clone o projeto do Front-end
-```bash git clone https://github.com/PedroCF87/front-nasa-test.git```
+``` git clone https://github.com/PedroCF87/front-nasa-test.git```
 
 ### 3 - Instale as dependências
-```bash npm i```
+``` npm i```
 
 ### 4 - Execute o projeto
-```bash npm run start```
+``` npm run start```
 
 ### 5 - Testes do projeto
-```bash npm run test```
+``` npm run test```
