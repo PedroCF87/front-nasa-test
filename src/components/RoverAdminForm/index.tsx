@@ -25,10 +25,7 @@ const RoverAdminForm: React.FC = () => {
             if (fileContent === null) return throwMessage(errors.emptyFile.message, 5, setError)
             // Se o arquivo estiver vazio, gera uma mensagem de erro
 
-            const response = await sendData(fileContent)
-
-            console.log(">> response: ", response)
-            
+            const response = await sendData(fileContent) 
 
             if (response.error) {
                 setLoading(false)
@@ -50,7 +47,6 @@ const RoverAdminForm: React.FC = () => {
             }, 1000)
 
         } catch (e) {
-            console.log(">> Erro do Catch (index.ts): ", e)
             return throwMessage(e.message, 5, setError)
         }
     }

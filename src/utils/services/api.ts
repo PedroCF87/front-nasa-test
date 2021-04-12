@@ -19,10 +19,7 @@ export const api = async (target: string, data: any) => {
 
       return response
     
-    } catch (error) {
-
-      console.log(">> Axios API > Catch Error: ", error)
-      
+    } catch (error) {      
       return error.message
     }
   }
