@@ -14,10 +14,40 @@ const RoverAdminForm: React.FC = () => {
     const [valid, setValid] = useState<Boolean>(false)
     const [fileContent, setFileContent] = useState<string | null>(null)
     const [error, setError] = useState<string | null>(null)
-    const _sendForm = () => {
-        if (!valid) return throwMessage(errors.selectValidFile.message, 5, setError)
+    const _sendForm = async () => {
+        try {
+            setSuccessResponse(null)
+            setLoading(true)
+            if (!valid) return throwMessage(errors.selectValidFile.message, 5, setError)
+            // Se o arquivo for inválido, gera uma mensagem de erro
 
-        alert("Função de enviar o formulário > File: "+ fileContent)
+            if (fileContent === null) return throwMessage(errors.emptyFile.message, 5, setError)
+            // Se o arquivo estiver vazio, gera uma mensagem de erro
+
+            const response = await sendData(fileContent)            
+
+            if (response.error) {
+                setLoading(false)
+                return throwMessage(response.error.message, 5, setError)
+            }
+            // Se o back-end retornar algum erro, a mensagem é exibida na tela
+            
+            const responseArray = response.result
+
+            let responsesHTML = responseArray.map((res: string) => {                
+                return <div key={(Date.now()+res).toString()}>{res}</div>
+            })
+            
+            // Para simular o tempo que levaria para se comunicar com os rovers em Marte
+            // Usei um "setTimeout", para que seja possível visualizar a mensagem de carregando
+            setTimeout(() => {
+                if (responsesHTML.length > 0) setSuccessResponse(responsesHTML)
+                setLoading(false)
+            }, 1000)
+
+        } catch (e) {
+            return throwMessage(e.message, 5, setError)
+        }
     }
     const _getFileContent = async (e: ChangeEvent<HTMLInputElement>) => {
         try {
