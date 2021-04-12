@@ -34,7 +34,6 @@ export const validateResult = (result: string) => {
         // Se o arquivo tiver um número ímpar de linhas, gera uma mensagem de erro
 
         let linesCount = 0
-        let roversCount = 0
         let validFile = true
 
         lines.forEach(line => {

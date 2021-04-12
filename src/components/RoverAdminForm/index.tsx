@@ -9,7 +9,6 @@ import { errors } from '../../utils/constants/index'
 
 const RoverAdminForm: React.FC = () => {
     const inputFile = useRef<HTMLInputElement>(null)
-    const inputContentFile = useRef<HTMLInputElement>(null)
     const [loading, setLoading] = useState<Boolean>(false)
     const [valid, setValid] = useState<Boolean>(false)
     const [fileContent, setFileContent] = useState<string | null>(null)
@@ -62,7 +61,7 @@ const RoverAdminForm: React.FC = () => {
                 // Envio o arquivo para a função de validar o arquivo
 
                 if (!validatedResult.success) return throwMessage(validatedResult.message, 5, setError)
-                if (validatedResult.fileContent !== undefined) {
+                if (validatedResult.fileContent !== undefined) {                    
                     setFileContent(validatedResult.fileContent)
                     setValid(true)                    
                 }
@@ -81,7 +80,6 @@ const RoverAdminForm: React.FC = () => {
         <div className="card" key="DefaultCard">
             <div className="card-body">
                 <form>
-                    <input type="hidden" id="test-input" />
                     <label>Arquivo de texto com os comandos</label>
                     <div>
                         <input 
