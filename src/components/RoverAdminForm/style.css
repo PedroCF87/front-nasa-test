@@ -49,3 +49,41 @@ form small {
     color: #FFF;
     font-size: 0.7em;
 }
+
+.loading-card {
+    background-color: #FFF;
+    max-width: 93%;
+}
+
+.loading-card .card-body {
+    flex-direction: row;
+    color: rgb(53, 53, 53);
+    font-size: 0.7em;
+}
+
+.loading-card .card-body img {
+    max-height: 86px;
+    width: auto;
+}
+
+.loading-card .card-body span {
+    position: relative;
+    top: -35px;
+    font-size: 1.3em;
+    margin-left: 16px;
+    color: #8b8b8b;
+}
+
+.response-card {
+    background-color: rgb(78, 78, 78);
+    max-width: 93%;
+}
+
+.response-card .card-body {
+    color: rgb(255, 255, 255);
+    font-size: 0.7em;
+}
+
+.response-card .card-body h4 {
+    margin-top: 8px;
+}

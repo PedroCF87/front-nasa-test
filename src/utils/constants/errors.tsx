@@ -1,3 +1,4 @@
+
 export const errors = {
     // Erros de Validação do arquivo de text
     invalidFile: {

@@ -1,4 +1,4 @@
-import { errors } from './constants/index'
+import { errors } from '../constants/index'
 
 export const validateResult = (result: string) => {
     try {
@@ -39,7 +39,7 @@ export const validateResult = (result: string) => {
 
         lines.forEach(line => {
           if (linesCount === 0 && line.length !== 3) validFile = false
-          else if (linesCount !== 0 && linesCount%2 === 1 && line !== '' && line.length !== 5) validFile = false
+          else if (linesCount !== 0 && linesCount%2 === 1 && line !== '' && line.length < 5) validFile = false
           else if (linesCount !== 0 && linesCount%2 === 0 && line !== '' && line.length === 0) validFile = false
           linesCount++
         })
@@ -49,7 +49,6 @@ export const validateResult = (result: string) => {
           fileContent: validFile ? fileContent : null
         }
     } catch (e) {
-      console.log(e.name + ': ' + e.message)
       return { success: false, ...errors.invalidFile }
     }
 }
